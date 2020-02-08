@@ -1,0 +1,42 @@
+h1{
+    align-content: center;
+    border: 5px solid White;
+    border-spacing: 10 px;
+    color: White;
+    padding: 10px;
+    border-width: 10px;
+    height: 50%;
+}
+table{
+    align-content: center;
+    border: 10px solid black;
+    border-collapse: collapse;
+    height: 90%;
+    width:90%;
+}
+.but{
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    background-color: blue;
+    color:#fcca03;
+    height:100%;
+
+}
+.but:hover{
+    cursor: pointer;
+    background-color: white;
+}
+th, td{
+    border: 5px solid black;
+    border-collapse:collapse;
+    text-align: center;
+}
+body {
+    background-color: blue;
+    font-style:Arial;   
+}
+.category{
+    color:white;
+    font-style:Times;
+}
