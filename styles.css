@@ -9,7 +9,7 @@ h1{
 }
 table{
     align-content: center;
-    border: 10px solid black;
+    border: 20% solid black;
     border-collapse: collapse;
     height: 90%;
     width:90%;
@@ -29,7 +29,7 @@ table{
     background-color: white;
 }
 th, td{
-    border: 5px solid black;
+    border: 10% solid black;
     border-collapse:collapse;
     text-align: center;
 }
