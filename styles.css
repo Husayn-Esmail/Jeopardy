@@ -21,6 +21,7 @@ table{
     background-color: blue;
     color:#fcca03;
     height:100%;
+    border: none;
 
 }
 .but:hover{
