@@ -42,3 +42,6 @@ body {
     color:white;
     font-style:Times;
 }
+.center{
+    align-items: center;
+}
