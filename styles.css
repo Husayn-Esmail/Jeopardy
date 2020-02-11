@@ -6,7 +6,7 @@ h1{
     padding: 10px;
     border-width: 10px;
     height: 5%;
-    width: 5%;
+    width: 15%;
 }
 table{
     align-content: center;
@@ -17,7 +17,7 @@ table{
 }
 .but{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
     width: 100%;
     background-color: blue;
     color:#fcca03;
@@ -41,6 +41,7 @@ body {
 .category{
     color:white;
     font-style:Times;
+    font-size: 40px;
 }
 .center{
     align-items: center;
