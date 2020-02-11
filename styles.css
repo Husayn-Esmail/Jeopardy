@@ -5,8 +5,8 @@ h1{
     color: White;
     padding: 10px;
     border-width: 10px;
-    height: 10%;
-    width: 10%;
+    height: 5%;
+    width: 15%;
 }
 table{
     align-content: center;
@@ -41,6 +41,7 @@ body {
 .category{
     color:white;
     font-style:Times;
+    font-size: 40px;
 }
 .center{
     align-items: center;
