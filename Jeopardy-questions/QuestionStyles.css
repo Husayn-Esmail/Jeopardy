@@ -1,0 +1,15 @@
+@import url(//db.onlinewebfonts.com/c/60aac436cf574f6b472101fdbd23bfa1?family=ITC+Korinna);
+@font-face {font-family: "ITC Korinna"; src: url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.eot"); src: url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.woff") format("woff"), url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/60aac436cf574f6b472101fdbd23bfa1.svg#ITC Korinna") format("svg"); }
+
+h1{
+    font-family:"ITC Korinna";
+    font-style: "Korinna", fallback, Arial;
+    color:white;
+    text-align: center;
+}
+
+body{
+    background-color: Blue;
+}
+
+
