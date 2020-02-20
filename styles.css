@@ -1,5 +1,5 @@
-h1{
-    align-content: center;
+/*h1{
+   align-content: center;
     border: 5px solid White;
     border-spacing: 10 px;
     color: White;
@@ -7,6 +7,13 @@ h1{
     border-width: 10px;
     height: 5%;
     width: 15%;
+}
+for an h1 tag if needed.
+*/
+#jeop{
+    padding: 15px;
+    height: 10%;
+    width: 20%;
 }
 table{
     align-content: center;
