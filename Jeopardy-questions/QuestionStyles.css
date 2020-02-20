@@ -12,4 +12,11 @@ body{
     background-color: Blue;
 }
 
+button{
+    background-color:yellow;
+}
+button:hover{
+    background-color: white;
+}
+
 
