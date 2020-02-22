@@ -6,7 +6,9 @@
     color:white;
     text-align: center;
 }*/
-
+body{
+    background-color: blue;
+}
 .questions{
     background-color: Blue;
     font-style: Arial;
@@ -19,6 +21,25 @@ button{
 button:hover{
     background-color: white;
     color: black;
+}
+
+.center{
+    text-align: center;
+    color: white;
+    font-family: ITC Korinna;
+    font-size: 2em;
+    padding-top: 3%;
+}
+p{
+    left:5px;
+}
+.points{
+    color:white;
+    box-sizing: border-box;
+    float:left;
+    border: 2px solid white;
+    border-collapse:collapse;
+    font-size: 30px;
 }
 
 
