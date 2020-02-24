@@ -14,13 +14,14 @@ body{
     font-style: Arial;
 }
 
-button{
+.next{
     background-color:yellow;
     color: black;
 }
-button:hover{
+.next:hover{
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .center{
@@ -42,4 +43,17 @@ p{
     font-size: 30px;
 }
 
+.back{
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    left: 10px; 
+    bottom: 10px;
+}
 
+img{
+    height:15px;
+    width:30px;
+    left:2px;
+    bottom:10px;
+}
