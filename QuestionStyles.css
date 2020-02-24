@@ -6,19 +6,54 @@
     color:white;
     text-align: center;
 }*/
-
+body{
+    background-color: blue;
+}
 .questions{
     background-color: Blue;
     font-style: Arial;
 }
 
-button{
+.next{
     background-color:yellow;
     color: black;
 }
-button:hover{
+.next:hover{
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
+.center{
+    text-align: center;
+    color: white;
+    font-family: ITC Korinna;
+    font-size: 2em;
+    padding-top: 3%;
+}
+p{
+    left:5px;
+}
+.points{
+    color:white;
+    box-sizing: border-box;
+    float:left;
+    border: 2px solid white;
+    border-collapse:collapse;
+    font-size: 30px;
+}
 
+.back{
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    left: 10px; 
+    bottom: 10px;
+}
+
+img{
+    height:15px;
+    width:30px;
+    left:2px;
+    bottom:10px;
+}
