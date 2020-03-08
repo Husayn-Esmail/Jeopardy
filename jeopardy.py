@@ -1,21 +1,16 @@
-catID=[]
-ID=[
-
-]
-question={
-
-}
-
 
 class Question:
-    QuestionID=-1
-    CatID=-1
-    QuestionTxt=""
-    AnswerTxt=""
-    PointVal=-1
+    def __init__(self,QuestionID, CatID, QuestionTxt, AnswerTxt, PointVal):
+        self.QuestionID= QuestionID
+        self.CatID= CatID
+        self.QuestionTxt=QuestionTxt
+        self.AnswerTxt=AnswerTxt
+        self.PointVal=PointVal
+        print("question is:" + self.QuestionTxt)
+
 
 
 class Category:
-    category={
-        1:"", 2:"", 3:"", 4:"", 5:""
-    }
+    def __init__(self, category):
+        self.category=category
+
