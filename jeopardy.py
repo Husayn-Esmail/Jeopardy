@@ -22,7 +22,7 @@ Jeopardy=Game()
 with open("Book1.csv", "r") as filestream:
     for line in filestream:
         currentline= line.split(",")
-        q1=Question(currentline[0], currentline[3], currentline[1], currentline[2])
+        q1=Question(currentline[1], currentline[2], currentline[3], currentline[4])
         print(q1)
 
 
