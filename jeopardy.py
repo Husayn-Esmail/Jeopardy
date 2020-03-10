@@ -5,6 +5,13 @@ print("<head>")
 print("<link rel='stylesheet' href='/Jeopardy/styles.css'>")
 print("</head>")
 print("<body>")
+print("<div class = "center" >")
+#This is the Jeopardy font. It's an image, if you ever have to change it, go to this website to use the same font https://fontmeme.com/jeopardy-font/-->
+print("<a href="https://fontmeme.com/jeopardy-font/">")
+print("<img src="https://fontmeme.com/permalink/200220/6b98c047956a0573caad64c61c62769d.png" alt="jeopardy-font" border="0" id="jeop">")
+print("</a>")
+print("</div>")
+
 #defining a class and creating constructors
 class Question:
     def __init__(self,QuestionID,QuestionTxt,AnswerTxt,PointVal):
