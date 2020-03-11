@@ -41,6 +41,12 @@ th, td{
     border-collapse:collapse;
     text-align: center;
 }
+th {
+    font-family:sans-serif;
+    font-size:1.9em;
+    font-weight:800;
+    color:Yellow;
+}
 body {
     background-color: blue;
     font-style:Arial;   
