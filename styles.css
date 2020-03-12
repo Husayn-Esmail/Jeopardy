@@ -49,21 +49,23 @@ th {
 }
 body {
     background-color: blue;
-    font-style:Arial;   
+    font-family:Arial;   
 }
 .category{
     color:white;
-    font-style:Times;
+    font-family:Times;
     font-size: 40px;
 }
-.center{
-    align-items: center;
-}
-
 
 .questions{
     background-color: Blue;
-    font-style: Arial;
+    text-align: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:50px;
+    border:2px solid yellow;
+    width:80%;
+    margin:100px;
 }
 
 .next{

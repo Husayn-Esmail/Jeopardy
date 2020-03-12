@@ -1,5 +1,7 @@
 #!/usr/bin/python
 import cgi
+from http import cookies
+
 form = cgi.FieldStorage()
 
 print("Content-type: text/html\n\n")
@@ -40,7 +42,7 @@ class Game:
         return '{}'.format(self.Categories)
 #creating game
 Jeopardy=Game()
-Jeopardy.Categories.index("Sports")
+
 #Python index starts at 0!
 #Opens and reads the file Book1.csv creates a list out split by commas and then creates an object q1 and prints various indexes
 oldcat = ""
@@ -51,33 +53,47 @@ irow = 1
 icol = 1
 firstline = True
 
+# load objects with data from csv file
+with open("Book1.csv", "r") as filestream:
+        questionsDict = {}
+        for line in filestream:
+            if firstline:
+                firstline = False
+            else:
+                currentline=line.split(",")
+                # currentQuestion=[currentLine[1],currentLine[2],currentLine[3],currentLine[4].rstrip()]
+                # questionsDict.update({currentLine[0] : currentQuestion })
+                # print(questionsDict)
+                #cat is the category name taken from the csv
+                cat = currentline[0]
+                if cat != oldcat:
+                    #connects game(property:categories) appending to list categories using Category object constructor
+                    Jeopardy.Categories.append(Category(cat))
+                    oldcat = cat
+                    nbrCat = nbrCat + 1
+                
+                qid = currentline[1]
+                qtxt = currentline[2]
+                atxt = currentline[3]
+                pval = currentline[4]
+
+                Jeopardy.Categories[nbrCat].Questions.append(Question(qid,qtxt,atxt,pval))
+
+
 print ("<form action=# method='post'>")
+
+# if form.getvalue("btn") == None:
+#     cookie = cookies.SimpleCookie()
+#     cookie["used"] = ""
+
+#     if form.getvalue("return") != None:
+#         coord = form.getvalue("return")
+#         cookie["used"] = coord
+
+#     useditems = cookie["used"].values()
+
 print ("<table>")
 
-with open("Book1.csv", "r") as filestream:
-    questionsDict = {}
-    for line in filestream:
-        if firstline:
-            firstline = False
-        else:
-            currentline=line.split(",")
-            # currentQuestion=[currentLine[1],currentLine[2],currentLine[3],currentLine[4].rstrip()]
-            # questionsDict.update({currentLine[0] : currentQuestion })
-            # print(questionsDict)
-            #cat is the category name taken from the csv
-            cat = currentline[0]
-            if cat != oldcat:
-                #connects game(property:categories) appending to list categories using Category object constructor
-                Jeopardy.Categories.append(Category(cat))
-                oldcat = cat
-                nbrCat = nbrCat + 1
-            
-            qid = currentline[1]
-            qtxt = currentline[2]
-            atxt = currentline[3]
-            pval = currentline[4]
-
-            Jeopardy.Categories[nbrCat].Questions.append(Question(qid,qtxt,atxt,pval))
 
             #for x in range(len(Jeopardy.Categories)):
             #    for y in range(len(Jeopardy.Categories[x].Questions)):
@@ -104,20 +120,34 @@ print("</tr>")
 #        print(cat.Questions[ind])
 
 #CHANGE TO QUESTIONS and increment
-for row in range(len(Jeopardy.Categories[0].Questions)):
-    print("<tr>")
-    for c in Jeopardy.Categories:
-        if len(c.Questions)>row:
-            print("<td><button class='but' value='%s' name='btn'>%s</button></td>" % (c.Questions[row].QuestionID, c.Questions[row].PointVal)) 
-        else:
-            print("<td></td>")
-    print("</tr>")
-    
+#for row in range(len(Jeopardy.Categories[0].Questions)):
+    #print("<tr>")
+    #for col,c in enumerate(Jeopardy.Categories):
+        #if "%s,%s" % (col,row) in useditems:
+        #    print("<td></td>")
+        #else:
+        #   if len(c.Questions)>row:
+        #        print("<td><button class='but' value='%s,%s,Q' name='btn'>%s</button></td>" % (col,row, c.Questions[row].PointVal)) 
+        #    else:
+        #        print("<td></td>")
+    #print("</tr>")
+        
 
 print ("</table>")
+
+# else:
+btn = form.getvalue("btn")
+yx = btn.split(",")
+col = int(yx[0])
+row = int(yx[1])
+qa = yx[2]
+if qa == "Q":
+    print ("<div class='questions'><h1><button value='%s,%s,A' name='btn'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].QuestionTxt))
+else:
+    print ("<div class='questions'><h1><button value='%s,%s' name='return'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].AnswerTxt))
 print ("</form>")
 
-print ("<div>Button pressed: %s</div>" % form.getvalue("btn"))
+
 
 print("</body>")
 print("</html>")
