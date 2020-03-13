@@ -148,8 +148,5 @@ else:
     print ("<div class='questions'><h1><button value='%s,%s' name='return'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].AnswerTxt))
 print ("</form>")
 
-
-
 print("</body>")
 print("</html>")
-
