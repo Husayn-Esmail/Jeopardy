@@ -7,7 +7,7 @@ Sports,5,Who is number 99 in hockey?,Wayne Gretzky,500
 Movies,6,Who was Bruce Lee?,Martial Artist and Actor,100
 Movies,7,What is the latest Mission Impossible?,MI6,200
 Movies,8,V for _______,V for Vendetta,300
-Movies,9,Name 3 genres of movies,"horror, suspense, drama, comedy, foreign. action, thriller, super natural",400
+Movies,9,Name 3 genres of movies,horror or suspense or drama or comedy or foreign or action or thriller or super natural,400
 Movies,10,Who plays the main role in Mission Impossible,Tom Cruise,500
 Miscellaneous,11,Who is the Prime Minister?,Justin Trudeau,100
 Miscellaneous,12,Who is the biggest political idiot on the planet in Alberta?,Premier Jason Kenney,200
@@ -17,10 +17,10 @@ Miscellaneous,15,Name 2 unix base OS’s,MacOS and Linux,500
 Games,16,What is LOL,League of Legends,100
 Games,17,What should be banned?,Fortnite,200
 Games,18,What’s the latest smash bros?,Smash Ultimate,300
-Games,19,Name 3 classic video games,"tetris, joust, pong",400
-Games,20,Name 3 consoles,"Wii, Switch, xbox, playstation,",500
+Games,19,Name 3 classic video games,tetris or joust or pong,400
+Games,20,Name 3 consoles,Wii or Switch or xbox or playstation,500
 Elements on the periodic table,21,What is the ionic form of Hydrogen,h+ or h-,100
 Elements on the periodic table,22,Chemical formula for Carbon Dioxide,CO2,200
-Elements on the periodic table,23,"What has no odour, taste, or colour and can kill you?",CO,300
+Elements on the periodic table,23,What has no odour or taste or colour and can kill you?,CO,300
 Elements on the periodic table,24,What is the most stable charge of Iron,Fe2+,400
 Elements on the periodic table,25,What is the chemical formula for Ozone,O3,500

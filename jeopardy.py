@@ -60,6 +60,7 @@ with open("Book1.csv", "r") as filestream:
             if firstline:
                 firstline = False
             else:
+                # Note that IF THE CSV CONTAINS COMMAS ANYWHERE IN THE FILE IT WILL BREAK THE PROGRAM
                 currentline=line.split(",")
                 # currentQuestion=[currentLine[1],currentLine[2],currentLine[3],currentLine[4].rstrip()]
                 # questionsDict.update({currentLine[0] : currentQuestion })
