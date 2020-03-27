@@ -12,11 +12,8 @@ print("</head>")
 print("<body>")
 print("<div class=center>")
 #This is the Jeopardy font. It's an image, if you ever have to change it, go to this website to use the same font https://fontmeme.com/jeopardy-font/-->
-#print("<a href=https://fontmeme.com/jeopardy-font/>")
 print("<img src=https://fontmeme.com/permalink/200220/6b98c047956a0573caad64c61c62769d.png alt=jeopardy-font border=0 id=jeop>")
-#print("</a>")
 print("</div>")
-#test
 #defining a class and creating constructors
 class Question:
     def __init__(self,QuestionID,QuestionTxt,AnswerTxt,PointVal):
@@ -54,14 +51,15 @@ icol = 1
 firstline = True
 
 # load objects with data from csv file
-with open("Book1.csv", "r") as filestream:
+with open("Book1.txt", "r") as filestream:
         questionsDict = {}
         for line in filestream:
             if firstline:
                 firstline = False
             else:
                 # Note that IF THE CSV CONTAINS COMMAS ANYWHERE IN THE FILE IT WILL BREAK THE PROGRAM
-                currentline=line.split(",")
+                currentline=line.split('\t')
+                print(line + "<br>")
                 # currentQuestion=[currentLine[1],currentLine[2],currentLine[3],currentLine[4].rstrip()]
                 # questionsDict.update({currentLine[0] : currentQuestion })
                 # print(questionsDict)
@@ -79,30 +77,13 @@ with open("Book1.csv", "r") as filestream:
                 pval = currentline[4]
 
                 Jeopardy.Categories[nbrCat].Questions.append(Question(qid,qtxt,atxt,pval))
-
-
+filestream.close()
+#clicked=open("Game_status.txt", "w+")
+#clicked.close()
 print ("<form action=# method='post'>")
 
-# if form.getvalue("btn") == None:
-#     cookie = cookies.SimpleCookie()
-#     cookie["used"] = ""
-
-#     if form.getvalue("return") != None:
-#         coord = form.getvalue("return")
-#         cookie["used"] = coord
-
-#     useditems = cookie["used"].values()
-
-print ("<table>")
-
-
-            #for x in range(len(Jeopardy.Categories)):
-            #    for y in range(len(Jeopardy.Categories[x].Questions)):
-            #        print(Jeopardy.Categories[x].Questions[y])
-            
-                
-            #print(str(Jeopardy.Categories[0].Questions))
-            
+print("<div class='center'>")
+print ("<table>")            
 
 #adds a table row and prints a header per each category
 print("<tr>")
@@ -111,41 +92,24 @@ for c in Jeopardy.Categories:
     print(c.category)
     print("</th>")
 print("</tr>")
-
-
-#if cat != oldcat:
-#    ind=-1
-#    for x in Jeopardy.Categories:        
-#        ind += 1
-#        print("<button class=but>")
-#        print(cat.Questions[ind])
-
-#CHANGE TO QUESTIONS and increment
-#for row in range(len(Jeopardy.Categories[0].Questions)):
-    #print("<tr>")
-    #for col,c in enumerate(Jeopardy.Categories):
-        #if "%s,%s" % (col,row) in useditems:
-        #    print("<td></td>")
-        #else:
-        #   if len(c.Questions)>row:
-        #        print("<td><button class='but' value='%s,%s,Q' name='btn'>%s</button></td>" % (col,row, c.Questions[row].PointVal)) 
-        #    else:
-        #        print("<td></td>")
-    #print("</tr>")
         
-
 print ("</table>")
+print("</div>")
 
-# else:
+
 btn = form.getvalue("btn")
-yx = btn.split(",")
-col = int(yx[0])
-row = int(yx[1])
-qa = yx[2]
-if qa == "Q":
-    print ("<div class='questions'><h1><button value='%s,%s,A' name='btn'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].QuestionTxt))
-else:
-    print ("<div class='questions'><h1><button value='%s,%s' name='return'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].AnswerTxt))
+print(btn)
+if btn != None:
+    yx = btn.split(",")
+    col = int(yx[0])
+    row = int(yx[1])
+    qa = yx[2]
+    if qa == "Q":
+        print ("<div class='questions'><h1><button value='%s,%s,A' name='btn'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].QuestionTxt))
+        print("<div> %s,%s </div>" % (row,col))
+    else:
+        print ("<div class='questions'><h1><button value='%s,%s' name='return'>%s</button></h1></div>" % (row,col,Jeopardy.Categories[col].Questions[row].AnswerTxt))
+        print("<div> %s,%s </div>" % (row,col))
 print ("</form>")
 
 print("</body>")

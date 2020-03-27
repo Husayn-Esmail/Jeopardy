@@ -48,6 +48,7 @@ th {
     color:Yellow;
 }
 body {
+    text-align:center;
     background-color: blue;
     font-family:Arial;   
 }
@@ -66,16 +67,6 @@ body {
     border:2px solid yellow;
     width:80%;
     margin:100px;
-}
-
-.next{
-    background-color:yellow;
-    color: black;
-}
-.next:hover{
-    background-color: white;
-    color: black;
-    cursor: pointer;
 }
 
 .center{
